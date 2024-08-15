@@ -1,0 +1,18 @@
+json Server - natãn
+
+Tela de listagem - Dyeison
+
+Tela de formulário / com validação- Natãn
+Campos formulário: 
+  - nome: string
+  - descrição: string 
+  - ingredientes: [string]
+  - modo de preparo: string
+  - tempo de preparo: string
+  - tempo de cozimento: string
+  - porções: string
+  - createdAt: Date
+  - updatedAt: Date
+
+Header - Dyeison
+Footer - Dyeison
