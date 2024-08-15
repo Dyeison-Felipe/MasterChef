@@ -16,3 +16,4 @@ Campos formulário:
 
 Header - Dyeison
 Footer - Dyeison
+Detalhes - Dyeison
