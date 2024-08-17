@@ -1,10 +1,9 @@
-
 export default function Home() {
   return (
-    <section className="flex flex-col items-center gap-8">
-      <div className="flex flex-col justify-center border border-black w-48 h-24 text-center  mt-4">
+    <section className="flex justify-center items-center ">
+      <div className="flex flex-col gap-4 border border-black">
         oioi
       </div>
     </section>
-  )
+  );
 }
