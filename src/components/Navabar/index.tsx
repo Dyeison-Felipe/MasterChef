@@ -41,7 +41,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link className="text-black hover:text-white" to="">
+              <Link className="text-black hover:text-white" to="/register">
                 Adicionar Receita
               </Link>
             </li>

@@ -1,3 +1,23 @@
 {
-  "recipes": []
+  "recipes": [
+    {
+      "id": "ed17",
+      "name": "Receita",
+      "description": "Description",
+      "preparationMethod": "1 - assar \n2 - servir",
+      "cookingTime": "10 min",
+      "serving": "1 prato",
+      "ingredients": [
+        {
+          "name": "ingrediente 1"
+        },
+        {
+          "name": "ingrediente 2"
+        },
+        {
+          "name": "ingrediente 3"
+        }
+      ]
+    }
+  ]
 }

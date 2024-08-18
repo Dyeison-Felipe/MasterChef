@@ -5,6 +5,8 @@ import { Input } from '../../components/Input';
 export default function RegisterRecipe() {
   const {
     errors,
+    ingredientInputRef,
+    ingredients,
     handleAddIngredient,
     handleSubmit,
     handleSubmitForm,
@@ -17,11 +19,19 @@ export default function RegisterRecipe() {
         onSubmit={handleSubmit(handleSubmitForm)}
         className="w-[40rem] mx-auto my-8 bg-zinc-100 p-8 rounded-xl shadow-md flex flex-col gap-4"
       >
-        <Input.Root label="Nome" htmlFor="name">
+        <Input.Root
+          label="Nome"
+          helperText={errors.name?.message}
+          htmlFor="name"
+        >
           <Input.Field {...register('name')} id="name" />
         </Input.Root>
 
-        <Input.Root label="Descrição" htmlFor="description">
+        <Input.Root
+          label="Descrição"
+          helperText={errors.description?.message}
+          htmlFor="description"
+        >
           <Input.Textarea
             {...register('description')}
             id="description"
@@ -29,7 +39,11 @@ export default function RegisterRecipe() {
           />
         </Input.Root>
 
-        <Input.Root label="Modo de Preparo" htmlFor="preparation-method">
+        <Input.Root
+          label="Modo de Preparo"
+          helperText={errors.preparationMethod?.message}
+          htmlFor="preparation-method"
+        >
           <Input.Textarea
             rows={3}
             {...register('preparationMethod')}
@@ -37,20 +51,50 @@ export default function RegisterRecipe() {
           />
         </Input.Root>
 
-        <Input.Root label="Tempo de Cozimento" htmlFor="cooking-time">
-          <Input.Field {...register('cookingTime')} id="cooking-time" />
+        <Input.Root
+          label="Tempo de Cozimento"
+          helperText={errors.cookingTime?.message}
+          htmlFor="cooking-time"
+        >
+          <Input.Field
+            {...register('cookingTime')}
+            id="cooking-time"
+            placeholder="Ex.: 10 minutos"
+          />
         </Input.Root>
 
-        <Input.Root label="Porções" htmlFor="serving">
-          <Input.Field {...register('serving')} id="serving" />
+        <Input.Root
+          label="Porções"
+          helperText={errors.serving?.message}
+          htmlFor="serving"
+        >
+          <Input.Field
+            {...register('serving')}
+            id="serving"
+            placeholder="Ex.: 1 tigela média (aproximadamente 250ml)"
+          />
         </Input.Root>
 
-        <Input.Root label="Ingredientes" htmlFor="ingredients">
+        <Input.Root
+          label="Ingredientes"
+          helperText={errors.ingredients?.message}
+          htmlFor="ingredients"
+        >
           <div className="w-full flex items-center gap-2">
-            <Input.Field {...register('ingredients')} id="ingredients" />
-            <FaPlus className="cursor-pointer" size={24} />
+            <Input.Field id="ingredients" ref={ingredientInputRef} />
+            <FaPlus
+              className="cursor-pointer"
+              size={24}
+              onClick={handleAddIngredient}
+            />
           </div>
         </Input.Root>
+
+        <ul className="list-disc ml-5">
+          {ingredients.map((ingredient, index) => (
+            <li key={`${ingredient.name}${index}`}>{ingredient.name}</li>
+          ))}
+        </ul>
 
         <button
           type="submit"
