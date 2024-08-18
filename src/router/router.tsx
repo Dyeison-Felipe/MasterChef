@@ -10,14 +10,12 @@ export default function Router() {
   return (
     <BrowserRouter>
       <Navbar />
-      <main className="min-h-[calc(100vh-6rem-6rem)]">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/details" element={<Details />} />
-          <Route path="/register" element={<RegisterRecipe />} />
-          <Route path="*" element={<Error />}></Route>
-        </Routes>
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/details" element={<Details />} />
+        <Route path="/register" element={<RegisterRecipe />} />
+        <Route path="*" element={<Error />}></Route>
+      </Routes>
       <Footer />
     </BrowserRouter>
   );
