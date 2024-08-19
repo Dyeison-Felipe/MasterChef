@@ -19,6 +19,154 @@
           "name": "água"
         }
       ]
+    },
+    {
+      "id": "2385",
+      "name": "Pão Caseiro",
+      "description": "Fazer pão caseiro é uma experiência gratificante e deliciosa, especialmente quando se pode sentir o aroma irresistível do pão assando pela casa. Esta receita de pão caseiro é simples, resultando em um pão macio por dentro e com uma casca crocante por fora. Os ingredientes são básicos: farinha de trigo, água, fermento biológico, sal, açúcar, óleo, ovos e leite. O pão caseiro é uma ótima opção para o café da manhã ou lanche, podendo ser servido com manteiga, geleia ou até mesmo para acompanhar refeições. Além disso, o prazer de fazer seu próprio pão é algo que torna a experiência ainda mais especial. Prepare esse pão caseiro e desfrute do sabor incomparável de um pão fresquinho feito por você mesmo. Uma receita simples que traz aconchego e alegria para a sua casa!",
+      "preparationMethod": "1 - Em uma tigela, dissolva o fermento no açúcar e acrescente o sal, os ingredientes líquidos, os ovos e misture muito bem \n2 - Acrescente aos poucos a farinha até formar uma massa macia e sove bem a massa.\n3 - Deixe a massa descansar por aproximadamente 1 hora.\n4 - Após o crescimento, divida a massa, enrole da forma que desejar, coloque nas formas e deixe crescer até dobrar de volume.\n5 - Leve para assar em forno médio (200° C), preaquecido, por aproximadamente 30 minutos.\n6 - Retire o pão do forno e pincele leite para a casca ficar mais macia.",
+      "cookingTime": "90 minutos",
+      "serving": "3 porções",
+      "category": "Pães",
+      "ingredients": [
+        {
+          "name": "1 kg de farinha de trigo aproximadamente"
+        },
+        {
+          "name": "1/2 xícara de água morna"
+        },
+        {
+          "name": "4 colheres (sopa) de açúcar (aprox. 200 g)"
+        },
+        {
+          "name": "2 ovos"
+        },
+        {
+          "name": "1 e 1/2 xícara de leite morno (aprox. 400 ml)"
+        },
+        {
+          "name": "1/2 xícara de óleo (aprox. 100 ml)"
+        },
+        {
+          "name": "1 colher (sopa) de sal"
+        },
+        {
+          "name": "10 g de fermento biológico seco"
+        }
+      ]
+    },
+    {
+      "id": "250f",
+      "name": "Massa de pizza",
+      "description": "Chegou a sua hora de virar um verdadeiro pizzaiolo! Esta receita revela o segredo para uma massa de pizza simples e rápida, diretamente na sua cozinha. Prepare-se para se encantar com o resultado final! Com apenas alguns ingredientes simples, como farinha de trigo, fermento biológico, água, óleo e um toque especial de cachaça, esta massa de pizza ganha vida em um processo rápido e prático. Comece dissolvendo o fermento, sal e açúcar na água morna, antes de misturar com a farinha, óleo e cachaça, formando uma massa de pizza macia e elástica. Após descansar por 30 minutos para crescer, é hora de abrir a massa em discos, furá-los com um garfo, adicionar o molho e levá-los ao forno pré-aquecido por 15 minutos, a uma temperatura média de 180°C. O resultado? Discos de pizza frescos e deliciosos prontos para receber o seu recheio favorito. Descubra o prazer de criar suas próprias pizzas em casa e surpreenda-se com a facilidade e sabor desta receita de massa de pizza incrível!",
+      "preparationMethod": "1 - Misture o fermento, o sal e o açúcar em um pouco de água morna, até que o fermento esteja completamente dissolvido.\n2 - Em seguida, adicione metade da medida de farinha de trigo, o óleo e mexa até criar uma consistência pastosa.\n3 - Acrescente o restante da farinha de trigo, a pinga, a água morna e misture bem.\n4 - Assim que a massa desgrudar das mãos, deixe crescer por 30 minutos.\n5 - Abra os discos, fure a massa com um garfo e pincele o molho.\n6 - Leve ao forno médio (180° C), preaquecido, por 15 minutos.",
+      "cookingTime": "15 min",
+      "serving": "5 porções",
+      "category": "Pizza",
+      "ingredients": [
+        {
+          "name": "1 kg de farinha de trigo"
+        },
+        {
+          "name": "3 xícaras de água morna"
+        },
+        {
+          "name": "1 colher (chá) de sal"
+        },
+        {
+          "name": "1 colher (sopa) de pinga"
+        },
+        {
+          "name": "30 g de fermento biológico"
+        },
+        {
+          "name": "3/4 xícaras de óleo"
+        },
+        {
+          "name": "1 colher (chá) de açúcar"
+        }
+      ]
+    },
+    {
+      "id": "5014",
+      "name": "Bombom de morango na travessa",
+      "description": "O bombom de morango na travessa é uma sobremesa simples, fácil e que leva apenas 5 ingredientes. Para fazer o doce, você precisa de leite condensado, creme de leite, morango, chocolate ao leite e manteiga ou margarina.",
+      "preparationMethod": "1 - Em uma panela, coloque 1 lata de leite condensado, 2 colheres de sopa de manteiga ou margarina e mexa sem parar até soltar do fundo da panela.\n2 - Desligue o fogo, adicione 1 lata de creme de leite e misture. Reserve.\n3 - Derreta 200 gramas ao leite picado em banho-maria ou no micro-ondas. Em seguida, adicione 1 lata de creme de leite e misture.\n4 - Em um refratário, coloque a mistura branca. Depois, faça uma camada com os morangos.\n5 - Em seguida, despeje o chocolate e leve para gelar.\n6 - Se quiser, coloque mais morangos. Sirva em seguida.",
+      "cookingTime": "20 min",
+      "serving": "1 travessa",
+      "category": "Sobremesa",
+      "ingredients": [
+        {
+          "name": "1 lata de leite condensado"
+        },
+        {
+          "name": "2 colheres de sopa de margarina ou manteiga"
+        },
+        {
+          "name": "2 latas de creme de leite"
+        },
+        {
+          "name": "200 gramas de chocolate ao leite picado"
+        },
+        {
+          "name": "1 caixa de morangos"
+        }
+      ]
+    },
+    {
+      "id": "1dca",
+      "name": "Torta Salgada",
+      "description": "Uma receita de torta salgada simples e deliciosa! E o melhor: é só juntar todos os ingredientes e bater no liquidificador! Confira agora mesmo como fazer essa delícia!",
+      "preparationMethod": "1 - Bata todos os ingredientes no liquidificador. \n2 - Depois coloque a metade da massa em uma forma untada e coloque o recheio. \n3 - Depois coloque o resto da massa. \n4 - Leve para assar até ficar dourado. \n5 - Recheio a gosto (ex frango, sardinha, etc).",
+      "cookingTime": "20 min",
+      "serving": "20 porções",
+      "category": "Salgados",
+      "ingredients": [
+        {
+          "name": "12 colheres de farinha de trigo"
+        },
+        {
+          "name": "3 ovos inteiros"
+        },
+        {
+          "name": "2 copos de leite"
+        },
+        {
+          "name": "100 g de mussarela ralada (opcional)"
+        },
+        {
+          "name": "1 copo de óleo"
+        },
+        {
+          "name": "sal a gosto"
+        },
+        {
+          "name": "1 colher de fermento"
+        }
+      ]
+    },
+    {
+      "id": "ea76",
+      "name": "Brigadeiro",
+      "description": "Ninguém resiste a essa receita de brigadeiro: ele é o rei das festas de aniversário e é impossível comer um só. Seja pra comemorar ou afogar as, mágoas no com uma panela de brigadeiro assistindo um filme triste, essa receita faz parte do dia a dia do brasileiro há décadas. Muito tradicional em nosso país, o brigadeiro é muito fácil de preparar: leva apenas leite condensado, margarina, achocolatado em pó e chocolate granulado. Além de comer as bolinhas nas festas de aniversário, ele é um doce versátil que você pode consumir de diversas maneiras: como cobertura de bolo, recheio, com colher, em copinhos ou até mesmo misturando com biscoitos e fazendo palhas italianas. Veja agora mesmo como fazer brigadeiro de forma simples e prática! Você quer outras receitas de doces para festa de aniversário? Saiba como fazer beijinho, cajuzinho, olho-de-sogra, casadinho e muito mais aqui no TudoGostoso! Confira!",
+      "preparationMethod": "1 - Em uma panela funda, acrescente o leite condensado, a margarina e o chocolate em pó.\n2 - Cozinhe em fogo médio e mexa até que o brigadeiro comece a desgrudar da panela.\n3 - Deixe esfriar e faça pequenas bolas com a mão passando a massa no chocolate granulado.",
+      "cookingTime": "25 min",
+      "serving": "30 porções",
+      "category": "Doces",
+      "ingredients": [
+        {
+          "name": "1 caixa de leite condensado"
+        },
+        {
+          "name": "7 colheres (sopa) de achocolatado ou 4 colheres (sopa) de chocolate em pó"
+        },
+        {
+          "name": "1 colher (sopa) de margarina sem sal"
+        },
+        {
+          "name": "chocolate granulado"
+        }
+      ]
     }
   ]
 }
