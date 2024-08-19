@@ -1,21 +1,22 @@
 {
   "recipes": [
     {
-      "id": "ed17",
-      "name": "Receita",
-      "description": "Description",
-      "preparationMethod": "1 - assar \n2 - servir",
-      "cookingTime": "10 min",
-      "serving": "1 prato",
+      "id": "6db8",
+      "name": "nome",
+      "description": "description",
+      "preparationMethod": "1- assar \n 2- servir",
+      "cookingTime": "34 minutos",
+      "serving": "2 formas médias",
+      "category": "Doces",
       "ingredients": [
         {
-          "name": "ingrediente 1"
+          "name": "trigo"
         },
         {
-          "name": "ingrediente 2"
+          "name": "açucar"
         },
         {
-          "name": "ingrediente 3"
+          "name": "água"
         }
       ]
     }

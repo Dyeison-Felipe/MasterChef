@@ -1,6 +1,7 @@
 import { FaPlus } from 'react-icons/fa6';
 import { useRegisterRecipe } from './useRegisterRecipe';
 import { Input } from '../../components/Input';
+import { RecipeCategory } from '../../enums/recipe';
 
 export default function RegisterRecipe() {
   const {
@@ -73,6 +74,16 @@ export default function RegisterRecipe() {
             id="serving"
             placeholder="Ex.: 1 tigela média (aproximadamente 250ml)"
           />
+        </Input.Root>
+
+        <Input.Root label="Categoria" helperText={errors.category?.message}>
+          <select {...register('category')} className="field">
+            <option value={RecipeCategory.candy}>Doces</option>
+            <option value={RecipeCategory.salty}>Salgados</option>
+            <option value={RecipeCategory.pizza}>Pizza</option>
+            <option value={RecipeCategory.bread}>Pães</option>
+            <option value={RecipeCategory.dessert}>Sobremesa</option>
+          </select>
         </Input.Root>
 
         <Input.Root

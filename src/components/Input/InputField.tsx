@@ -10,10 +10,7 @@ const InputField = forwardRef<HTMLInputElement, FieldProps>(
         type="text"
         id="name"
         ref={ref}
-        className={twMerge(
-          'w-full px-4 py-2 border-2 rounded-md outline-none mt-1',
-          className,
-        )}
+        className={twMerge('field', className)}
         {...rest}
       />
     );

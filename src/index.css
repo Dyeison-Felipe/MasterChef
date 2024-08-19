@@ -6,4 +6,9 @@
   .navbarButton {
     @apply flex justify-center items-center text-center rounded-md w-36 bg-[#D9A900]
   }
+
+  .field {
+    @apply w-full px-4 py-2 rounded-md border-2 mt-1 outline-none;
+  }
+  
 }

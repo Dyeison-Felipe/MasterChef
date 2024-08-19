@@ -8,6 +8,7 @@ import {
 import { useRef } from 'react';
 import { saveRecipe } from '../../services/recipes';
 import { toast } from 'react-toastify';
+import { RecipeCategory } from '../../enums/recipe';
 
 export const useRegisterRecipe = () => {
   const {
@@ -26,6 +27,7 @@ export const useRegisterRecipe = () => {
       ingredients: [],
       name: '',
       preparationMethod: '',
+      category: RecipeCategory.candy,
       serving: '',
     },
   });
@@ -53,6 +55,7 @@ export const useRegisterRecipe = () => {
   };
 
   const handleSubmitForm = async (data: registerRecipeFormData) => {
+    console.log('🚀 ~ handleSubmitForm ~ data:', data);
     try {
       await saveRecipe(data);
       reset();
