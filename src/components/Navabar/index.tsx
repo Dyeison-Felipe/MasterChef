@@ -17,11 +17,13 @@ export default function Navbar() {
     <nav className="bg-cyan-500 flex flex-col max-md:flex gap-4 pb-4">
       <div className="flex justify-around items-center max-md:flex-col max-md:justify-center max-md:gap-4">
         <div>
-          <img
-            className="w-20"
-            src="/Logo_Master_Chef.svg"
-            alt="Logotipo do site"
-          />
+          <Link to='/'>          
+            <img
+              className="w-20"
+              src="/Logo_Master_Chef.svg"
+              alt="Logotipo do site"
+            />
+          </Link>
         </div>
 
         <span>
