@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="flex justify-around items-center bg-cyan-500 h-24">
+    <footer className="md:flex md:justify-around md:items-center bg-cyan-500 h-auto p-4 max-md:flex max-md:flex-col max-md:justify-center max-md:items-center">
       <div>
         <img className="w-20" src="/Logo_Master_Chef.svg" alt="Logotipo do site" />
       </div>

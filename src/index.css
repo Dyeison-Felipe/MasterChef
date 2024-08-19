@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .navbarButton {
+    @apply flex justify-center items-center text-center rounded-md w-36 bg-[#D9A900]
+  }
+}

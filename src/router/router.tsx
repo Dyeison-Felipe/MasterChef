@@ -14,7 +14,7 @@ export default function Router() {
         <Route path="/" element={<Home />} />
         <Route path="/details" element={<Details />} />
         <Route path="/register" element={<RegisterRecipe />} />
-        <Route path="*" element={<Error />}></Route>
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </BrowserRouter>
