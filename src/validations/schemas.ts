@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { onlyLettersRegex } from './regex';
+import { RecipeCategory } from '../enums/recipe';
 
 const requiredCommonField = (requiredMessage: string) =>
   z.string({ required_error: requiredMessage }).trim().min(1, requiredMessage);
@@ -47,6 +48,10 @@ export const registerRecipeSchema = z.object({
       message: 'Porções inválidas.',
     },
   ),
+  category: z.enum(Object.values(RecipeCategory) as [string, ...string[]], {
+    required_error: 'A categoria é obrigatória.',
+    message: 'Categoria inválida.',
+  }),
   ingredients: z
     .array(ingredientSchema, {
       required_error: 'A receita precisa ter pelo menos um ingrediente.',
