@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaPizzaSlice, FaCandyCane } from "react-icons/fa";
 import { GiSlicedBread, GiCakeSlice } from "react-icons/gi";
 import { IoFastFoodSharp } from "react-icons/io5";
@@ -14,6 +14,14 @@ export default function Navbar({selectCategory}: NavbarCategory) {
   const clickMenu = () => {
     setMenu(!menu);
   };
+
+
+  const navigate = useNavigate()
+
+  const filterCategory = (category: string) => {
+    navigate({search: `filter=${category}`})
+  }
+
 
   return (
     <nav className="bg-cyan-500 flex flex-col max-md:flex gap-4 pb-4">
@@ -56,15 +64,15 @@ export default function Navbar({selectCategory}: NavbarCategory) {
         className={`${menu ? "flex" : "hidden"
           } md:flex md:justify-around md:items-center text-center max-md:flex-col max-md:justify-center max-md:items-center max-md:gap-4`}
       >
-        <NavbarButton text="Doces" icon={<FaCandyCane />} onClick={() => selectCategory(RecipeCategory.candy)} />
+        <NavbarButton text="Doces" icon={<FaCandyCane />} onClick={() => filterCategory(RecipeCategory.candy)} />
 
-        <NavbarButton text="Salgados" icon={<IoFastFoodSharp />} onClick={() => selectCategory(RecipeCategory.salty)} />
+        <NavbarButton text="Salgados" icon={<IoFastFoodSharp />} onClick={() => filterCategory(RecipeCategory.salty)} />
 
-        <NavbarButton text="Pizza" icon={<FaPizzaSlice />} onClick={() => selectCategory(RecipeCategory.pizza)}/>
+        <NavbarButton text="Pizza" icon={<FaPizzaSlice />} onClick={() => filterCategory(RecipeCategory.pizza)}/>
 
-        <NavbarButton text="Pães" icon={<GiSlicedBread />} onClick={() => selectCategory(RecipeCategory.bread)}/>
+        <NavbarButton text="Pães" icon={<GiSlicedBread />} onClick={() => filterCategory(RecipeCategory.bread)}/>
 
-        <NavbarButton text="Sobremesa" icon={<GiCakeSlice />} onClick={() => selectCategory(RecipeCategory.dessert)}/>
+        <NavbarButton text="Sobremesa" icon={<GiCakeSlice />} onClick={() => filterCategory(RecipeCategory.dessert)}/>
       </div>
     </nav>
   );
