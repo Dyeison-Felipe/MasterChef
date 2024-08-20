@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaPizzaSlice, FaCandyCane } from "react-icons/fa";
 import { GiSlicedBread, GiCakeSlice } from "react-icons/gi";
 import { IoFastFoodSharp } from "react-icons/io5";
@@ -6,28 +6,27 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import NavbarButton from "../NavbarButton/NavbarButton";
 import { useState } from "react";
 import { RecipeCategory } from "../../enums/recipe";
-import { NavbarCategory } from "../../types/categoryNavbar";
 
-export default function Navbar({selectCategory}: NavbarCategory) {
+export default function Navbar() {
   const [menu, setMenu] = useState(false);
+
+  const location = useLocation();
 
   const clickMenu = () => {
     setMenu(!menu);
   };
 
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const filterCategory = (category: string) => {
-    navigate({search: `filter=${category}`})
-  }
-
+    navigate({ search: `filter=${category}` });
+  };
 
   return (
     <nav className="bg-cyan-500 flex flex-col max-md:flex gap-4 pb-4">
       <div className="flex justify-around items-center max-md:flex-col max-md:justify-center max-md:gap-4">
         <div>
-          <Link to='/'>
+          <Link to="/">
             <img
               className="w-20"
               src="/Logo_Master_Chef.svg"
@@ -60,20 +59,44 @@ export default function Navbar({selectCategory}: NavbarCategory) {
         </div>
       </div>
 
-      <div
-        className={`${menu ? "flex" : "hidden"
+      {location.pathname === "/" && (
+        <div
+          className={`${
+            menu ? "flex" : "hidden"
           } md:flex md:justify-around md:items-center text-center max-md:flex-col max-md:justify-center max-md:items-center max-md:gap-4`}
-      >
-        <NavbarButton text="Doces" icon={<FaCandyCane />} onClick={() => filterCategory(RecipeCategory.candy)} />
+        >
+          <NavbarButton
+            text="Doces"
+            icon={<FaCandyCane />}
+            onClick={() => filterCategory(RecipeCategory.candy)}
+          />
 
-        <NavbarButton text="Salgados" icon={<IoFastFoodSharp />} onClick={() => filterCategory(RecipeCategory.salty)} />
+          <NavbarButton
+            text="Salgados"
+            icon={<IoFastFoodSharp />}
+            onClick={() => filterCategory(RecipeCategory.salty)}
+          />
 
-        <NavbarButton text="Pizza" icon={<FaPizzaSlice />} onClick={() => filterCategory(RecipeCategory.pizza)}/>
+          <NavbarButton
+            text="Pizza"
+            icon={<FaPizzaSlice />}
+            onClick={() => filterCategory(RecipeCategory.pizza)}
+          />
 
-        <NavbarButton text="Pães" icon={<GiSlicedBread />} onClick={() => filterCategory(RecipeCategory.bread)}/>
+          <NavbarButton
+            text="Pães"
+            icon={<GiSlicedBread />}
+            onClick={() => filterCategory(RecipeCategory.bread)}
+          />
 
-        <NavbarButton text="Sobremesa" icon={<GiCakeSlice />} onClick={() => filterCategory(RecipeCategory.dessert)}/>
-      </div>
+          <NavbarButton
+            text="Sobremesa"
+            icon={<GiCakeSlice />}
+            onClick={() => filterCategory(RecipeCategory.dessert)}
+          />
+        </div>
+      )}
     </nav>
   );
+      console.log("🚀 ~ Navbar ~ location:", location)
 }
