@@ -2,9 +2,14 @@ import { useEffect, useState } from "react";
 import { RecipieData } from "../../types/recipeData";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { RecipeCategory } from "../../enums/recipe";
 
 export default function Home() {
   const [data, setData] = useState<RecipieData[]>([]);
+
+  const selectCategory = (category: RecipeCategory) => {
+    
+  }
 
   useEffect(() => {
     axios.get('http://localhost:3000/recipes')
