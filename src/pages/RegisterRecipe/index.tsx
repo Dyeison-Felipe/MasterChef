@@ -2,12 +2,14 @@ import { FaPlus } from 'react-icons/fa6';
 import { useRegisterRecipe } from './useRegisterRecipe';
 import { Input } from '../../components/Input';
 import { RecipeCategory } from '../../enums/recipe';
+import { MdDelete } from 'react-icons/md';
 
 export default function RegisterRecipe() {
   const {
     errors,
     ingredientInputRef,
     ingredients,
+    handleRemoveIngredient,
     handleAddIngredient,
     handleSubmit,
     handleSubmitForm,
@@ -18,7 +20,8 @@ export default function RegisterRecipe() {
     <div className="w-full">
       <form
         onSubmit={handleSubmit(handleSubmitForm)}
-        className="w-[40rem] mx-auto my-8 bg-zinc-100 p-8 rounded-xl shadow-md flex flex-col gap-4"
+        className="w-[40rem] max-sm:px-2 max-sm:w-full mx-auto my-8
+         bg-zinc-100 p-8 rounded-xl shadow-md flex flex-col gap-4"
       >
         <Input.Root
           label="Nome"
@@ -101,9 +104,18 @@ export default function RegisterRecipe() {
           </div>
         </Input.Root>
 
-        <ul className="list-disc ml-5">
+        <ul className="list-disc ml-5 flex flex-col gap-2 max-sm:gap-4">
           {ingredients.map((ingredient, index) => (
-            <li key={`${ingredient.name}${index}`}>{ingredient.name}</li>
+            <li key={`${ingredient.name}${index}`} className="w-full list-item">
+              <div className="flex justify-between items-center">
+                <span>{ingredient.name}</span>
+                <MdDelete
+                  className="cursor-pointer"
+                  size={20}
+                  onClick={() => handleRemoveIngredient(index)}
+                />
+              </div>
+            </li>
           ))}
         </ul>
 

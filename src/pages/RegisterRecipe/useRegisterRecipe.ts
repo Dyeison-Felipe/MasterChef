@@ -66,10 +66,19 @@ export const useRegisterRecipe = () => {
     }
   };
 
+  const handleRemoveIngredient = (ingredientIndex: number) => {
+    const filteredIngredients = ingredients.filter(
+      (_, index) => index !== ingredientIndex,
+    );
+
+    setValue('ingredients', filteredIngredients);
+  };
+
   return {
     errors,
     ingredientInputRef,
     ingredients,
+    handleRemoveIngredient,
     register,
     handleSubmit,
     handleAddIngredient,

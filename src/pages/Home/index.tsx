@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { RecipieData } from "../../types/recipeData";
-import { Link, useSearchParams } from "react-router-dom";
-import ModalDetails from "../../components/ModalDetails";
-import { api } from "../../services/api";
+import { useEffect, useState } from 'react';
+import { RecipieData } from '../../types/recipeData';
+import { Link, useSearchParams } from 'react-router-dom';
+import ModalDetails from '../../components/ModalDetails';
+import { api } from '../../services/api';
 
 export default function Home() {
   const [data, setData] = useState<RecipieData[]>([]);
@@ -10,7 +10,7 @@ export default function Home() {
   const [openModal, setOpenModal] = useState(false);
 
   const [searchParams] = useSearchParams();
-  const categoryFilter = searchParams.get("filter");
+  const categoryFilter = searchParams.get('filter');
 
   const isOpenModal = (recipe: RecipieData) => {
     setSelectRecipe(recipe);
@@ -23,16 +23,15 @@ export default function Home() {
   };
 
   useEffect(() => {
-    console.log("🚀 ~ useEffect ~ categoryFilter:", categoryFilter);
     api
-      .get(`/recipes?category=${categoryFilter ?? ""}`)
+      .get(`/recipes?category=${categoryFilter ?? ''}`)
       .then((response) => {
         setData(response.data);
       })
       .catch((error) => {
-        console.log("algo deu errado", error);
+        console.log('algo deu errado', error);
       });
-    }, [categoryFilter]);
+  }, [categoryFilter]);
 
   return (
     <section className="flex justify-center items-start min-h-screen p-4">
