@@ -53,7 +53,7 @@ export default function Navbar() {
             <li>
               <Link
                 className="text-black hover:text-white"
-                to="/register-recipe"
+                to="/register"
               >
                 Adicionar Receita
               </Link>
