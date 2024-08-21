@@ -9,8 +9,11 @@ import { useRef } from 'react';
 import { saveRecipe } from '../../services/recipes';
 import { toast } from 'react-toastify';
 import { RecipeCategory } from '../../enums/recipe';
+import { useTitle } from '../../hooks/useTitle';
 
 export const useRegisterRecipe = () => {
+  useTitle('Cadastrar Receita');
+
   const {
     formState: { errors },
     register,

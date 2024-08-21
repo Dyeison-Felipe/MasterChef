@@ -1,11 +1,11 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaPizzaSlice, FaCandyCane } from "react-icons/fa";
-import { GiSlicedBread, GiCakeSlice } from "react-icons/gi";
-import { IoFastFoodSharp } from "react-icons/io5";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import NavbarButton from "../NavbarButton/NavbarButton";
-import { useState } from "react";
-import { RecipeCategory } from "../../enums/recipe";
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { FaPizzaSlice, FaCandyCane } from 'react-icons/fa';
+import { GiSlicedBread, GiCakeSlice } from 'react-icons/gi';
+import { IoFastFoodSharp } from 'react-icons/io5';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { useState } from 'react';
+import { RecipeCategory } from '../../enums/recipe';
+import NavbarButton from '../NavbarButton/NavbarButton';
 
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
@@ -43,7 +43,7 @@ export default function Navbar() {
           )}
         </span>
 
-        <div className={`md:flex ${menu ? "flex" : "hidden"}`}>
+        <div className={`md:flex ${menu ? 'flex' : 'hidden'}`}>
           <ul className="flex justify-center items-center max-md:flex-col gap-4">
             <li>
               <Link className="text-black hover:text-white" to="/">
@@ -51,7 +51,10 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link className="text-black hover:text-white" to="/register">
+              <Link
+                className="text-black hover:text-white"
+                to="/register-recipe"
+              >
                 Adicionar Receita
               </Link>
             </li>
@@ -59,10 +62,10 @@ export default function Navbar() {
         </div>
       </div>
 
-      {location.pathname === "/" && (
+      {location.pathname === '/' && (
         <div
           className={`${
-            menu ? "flex" : "hidden"
+            menu ? 'flex' : 'hidden'
           } md:flex md:justify-around md:items-center text-center max-md:flex-col max-md:justify-center max-md:items-center max-md:gap-4`}
         >
           <NavbarButton
@@ -98,5 +101,4 @@ export default function Navbar() {
       )}
     </nav>
   );
-      console.log("🚀 ~ Navbar ~ location:", location)
 }

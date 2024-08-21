@@ -3,8 +3,11 @@ import { RecipieData } from '../../types/recipeData';
 import { Link, useSearchParams } from 'react-router-dom';
 import ModalDetails from '../../components/ModalDetails';
 import { api } from '../../services/api';
+import { useTitle } from '../../hooks/useTitle';
 
 export default function Home() {
+  useTitle();
+
   const [data, setData] = useState<RecipieData[]>([]);
   const [selectRecipe, setSelectRecipe] = useState<RecipieData | null>(null);
   const [openModal, setOpenModal] = useState(false);

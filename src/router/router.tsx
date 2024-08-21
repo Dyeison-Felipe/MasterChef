@@ -11,7 +11,7 @@ export default function Router() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/register" element={<RegisterRecipe />} />
+        <Route path="/register-recipe" element={<RegisterRecipe />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
