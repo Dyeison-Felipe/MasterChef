@@ -1,21 +1,22 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { RecipieData } from "../../types/recipeData";
-import axios from "axios";
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { RecipieData } from '../../types/recipeData';
+import { api } from '../../services/api';
+import { useTitle } from '../../hooks/useTitle';
 
 export default function Details() {
+  useTitle('Detalhes');
+
   const { id } = useParams<{ id: string }>();
   const [data, setData] = useState<RecipieData | null>(null);
 
   useEffect(() => {
     try {
-      axios
-        .get(`http://localhost:3000/recipes/${id}`)
-        .then((response) => {
-          setData(response.data);
-        })
+      api.get(`http://localhost:3000/recipes/${id}`).then((response) => {
+        setData(response.data);
+      });
     } catch (error) {
-      console.log("Ocorreu um erro ao buscar os detalhes ", error);
+      console.log('Ocorreu um erro ao buscar os detalhes ', error);
     }
   }, [id]);
 

@@ -21,7 +21,7 @@ export default function RegisterRecipe() {
       <form
         onSubmit={handleSubmit(handleSubmitForm)}
         className="w-[40rem] max-sm:px-2 max-sm:w-full mx-auto my-8
-         bg-zinc-100 p-8 rounded-xl shadow-md flex flex-col gap-4"
+         border border-black p-8 rounded-md shadow-2xl flex flex-col gap-4"
       >
         <Input.Root
           label="Nome"
@@ -121,7 +121,7 @@ export default function RegisterRecipe() {
 
         <button
           type="submit"
-          className="bg-cyan-500 text-zinc-100 px-4 py-2 rounded-md mt-4"
+          className="hover:bg-blue-600 text-zinc-100 px-4 py-2 rounded-md mt-4 bg-blue-500"
         >
           Cadastrar
         </button>
