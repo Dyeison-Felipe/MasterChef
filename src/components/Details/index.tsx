@@ -12,7 +12,7 @@ export default function Details() {
 
   useEffect(() => {
     try {
-      api.get(`http://localhost:3000/recipes/${id}`).then((response) => {
+      api.get(`recipes/${id}`).then((response) => {
         setData(response.data);
       });
     } catch (error) {

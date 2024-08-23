@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
     api
-      .get(`/recipes?category=${categoryFilter ?? ""}`)
+      .get(`recipes?category=${categoryFilter ?? ""}`)
       .then((response) => {
         setData(response.data);
       })
