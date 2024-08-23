@@ -10,8 +10,9 @@ export default function Home() {
   const categoryFilter = searchParams.get("filter");
 
   useEffect(() => {
+    const endpoint = categoryFilter ? `recipes?category=${categoryFilter}` : `recipes`;
     api
-      .get(`recipes?category=${categoryFilter ?? ""}`)
+      .get(endpoint)
       .then((response) => {
         setData(response.data);
       })
