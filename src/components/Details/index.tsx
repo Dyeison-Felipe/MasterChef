@@ -21,7 +21,7 @@ export default function Details() {
   }, [id]);
 
   if (!data) {
-    return <p>Carregando...</p>;
+    return <p className='h-screen'>Carregando...</p>;
   }
 
   return (
